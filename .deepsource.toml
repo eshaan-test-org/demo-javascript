@@ -1,25 +1,4 @@
 version = 1
-test_patterns = [
-  "*/cypress/**",
-  "**/__test__/**",
-  "*.spec.*",
-  "WebSite.Tests/**"
-]
-exclude_patterns = [
-  "**/node_modules/",
-  "**/dist/",
-  "**/distro/",
-  "*/coverage/",
-  "*/bin/",
-  "*/obj/",
-  "*/nls/",
-  "*/BuildFiles/",
-  "*/Ext-ux-4/",
-  "*/ExtJs-4-1/",
-  "*/SharedScripts/Libs/",
-  "*/Scripts/",
-  "*/webpack.config.js"
-]
 
 [[analyzers]]
 name = "csharp"
