@@ -1,18 +1,42 @@
 version = 1
+test_patterns = [
+  "*/cypress/**",
+  "**/__test__/**",
+  "*.spec.*",
+  "WebSite.Tests/**"
+]
+exclude_patterns = [
+  "**/node_modules/",
+  "**/dist/",
+  "**/distro/",
+  "*/coverage/",
+  "*/bin/",
+  "*/obj/",
+  "*/nls/",
+  "*/BuildFiles/",
+  "*/Ext-ux-4/",
+  "*/ExtJs-4-1/",
+  "*/SharedScripts/Libs/",
+  "*/Scripts/",
+  "*/webpack.config.js"
+]
+
+[[analyzers]]
+name = "csharp"
 
 [[analyzers]]
 name = "javascript"
-enabled = true
 
   [analyzers.meta]
-  environment = ['nodejs']
-  plugins = ['react', 'vue']
-  dialect = 'flow'
-  dependency_file_paths = [
-    'packages/demo-react/',
-    'packages/demo-vue'
-  ]
+  plugins = [ "react" ]
+  environment = [ "nodejs", "browser", "jest", "mocha", "cypress", "jquery" ]
+  dialect = "typescript"
+  dependency_file_paths = [ "WebSite/" ]
 
 [[transformers]]
-    name = "prettier"
-    enabled = true
+name = "dotnet-format"
+enabled = false
+
+[[transformers]]
+name = "prettier"
+enabled = false
